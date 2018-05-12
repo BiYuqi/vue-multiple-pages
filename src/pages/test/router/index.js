@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import TestMo from '@/pages/test/components/Test'
 
 Vue.use(Router)
 
@@ -9,7 +8,12 @@ export default new Router({
     {
       path: '/',
       name: 'testmo',
-      component: TestMo
+      component: () => import('@/pages/test/components/test-one.vue')
+    },
+    {
+      path: '/test',
+      name: 'test_child',
+      component: () => import('@/pages/test/components/test-child.vue')
     }
   ]
 })

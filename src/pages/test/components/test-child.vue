@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="home-wrap">
-    <div class="home">Home</div>
+  <div class="test-child">
+    Test的路由页面
     <button type="button" name="button" @click="jump">
       返回
     </button>
@@ -18,6 +18,9 @@ export default {
 </script>
 
 <style lang="css">
+.test-child{
+  text-align: center;
+}
 button{
   outline: none;
   border: none;
