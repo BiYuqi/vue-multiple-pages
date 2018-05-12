@@ -130,7 +130,7 @@ exports.htmlPlugin = function () {
     const arr = []
     entryHtml.forEach((filePath) => {
         const filename = filePath.match(/(\w+)\.html$/)[1]
-        const conf = {
+        let conf = {
             // 模板来源
             template: filePath,
             // 文件名称
