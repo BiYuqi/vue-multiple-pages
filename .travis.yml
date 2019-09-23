@@ -1,18 +1,21 @@
 language: node_js
-node_js: stable
+language: node_js
+node_js:
+  - "8"
+  - "10"
 
 # cache:
 #   directories:
 #     - node_modules
 
 before_install:
-  - export TZ='Asia/Beijing' # 更改时区
+  - export TZ='Asia/Shanghai'
 
 install:
   - npm install
 
 script:
-  - npm run build
+  - npm run build:github
 
 after_script:
   - cd ./dist

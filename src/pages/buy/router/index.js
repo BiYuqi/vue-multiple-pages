@@ -8,12 +8,12 @@ export default new Router({
     {
       path: '/',
       name: 'home-page',
-      component: () => import('@index/components/HomePage.vue')
+      component: () => import('@buy/components/HomePage.vue')
     },
     {
       path: '/with-router',
       name: 'with-router',
-      component: () => import('@index/components/WithRouter.vue')
+      component: () => import('@buy/components/WithRouter.vue')
     }
   ]
 })

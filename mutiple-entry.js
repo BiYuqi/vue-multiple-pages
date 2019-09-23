@@ -1,9 +1,3 @@
-# [vue-multiple-pages](https://github.com/BiYuqi/vue-multiple-pages)
-
-> Vue多页面配置实例
-
-## Mutiple Setting
-```js
 const path = require('path')
 const glob = require('glob')
 
@@ -29,20 +23,3 @@ const createEntry = () => {
 }
 
 module.exports = createEntry
-```
-
-## 使用方法请看 vue.config.js
-
-## Usage
-
-``` bash
-git clone https://github.com/BiYuqi/vue-multiple-pages.git
-
-cd vue-multiple-pages
-
-npm install
-
-npm run serve
-
-npm run build
-```
