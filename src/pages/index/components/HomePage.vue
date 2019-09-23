@@ -2,7 +2,13 @@
   <div class="home-page">
     <el-card class="box-card">
       <div slot="header" class="clearfix">
-        <span>多页面之默认页面Index Page</span>
+        <span>
+          多页面之默认页面Index Page
+          <a
+            href="https://github.com/BiYuqi/vue-multiple-pages"
+            target="_blank"
+            class="author">@author</a>
+        </span>
       </div>
       <el-row>
         <el-button type="success" @click="jump">通过路由跳转到其他页面</el-button>
@@ -38,6 +44,9 @@ export default {
 .home-page {
   a {
     color: #fff;
+    &.author {
+      color: #666;
+    }
   }
   .box-card {
     width: 60%;
