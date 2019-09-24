@@ -1,6 +1,6 @@
-# [vue-multiple-pages](https://github.com/BiYuqi/vue-multiple-pages)
+<h1 align="center">Vue Multiple Pages 👋</h1>
 
-> Vue多页面配置实例
+> [Vue多页面](https://github.com/BiYuqi/vue-multiple-pages)配置实例
 
 ## Mutiple Setting
 ```js

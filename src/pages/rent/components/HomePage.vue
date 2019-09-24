@@ -37,7 +37,7 @@
     }
   }
   .box-card {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
   }

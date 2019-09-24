@@ -11,7 +11,7 @@
         </span>
       </div>
       <el-row>
-        <el-button type="success" @click="jump">通过路由跳转到其他页面</el-button>
+        <el-button type="success" @click="jump">通过路由跳转到其他组件</el-button>
       </el-row>
       <el-row>
         <el-button type="primary">
@@ -49,7 +49,7 @@ export default {
     }
   }
   .box-card {
-    width: 60%;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
   }

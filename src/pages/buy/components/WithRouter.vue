@@ -5,7 +5,7 @@
         <span>多页面之Buy Page的WithRouter Page</span>
       </div>
       <el-row>
-        <el-button type="success" @click="jump">通过路由跳转到首页--Buy Page</el-button>
+        <el-button type="success" @click="jump">由路由跳转到--Buy Page</el-button>
       </el-row>
       <el-row>
         <el-button type="primary">

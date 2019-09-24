@@ -1,6 +1,7 @@
 {
-  "name": "cli3-version",
+  "name": "vue-mutiple-pages",
   "version": "0.1.0",
+  "description": "A mutiple pages project for vue.",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
