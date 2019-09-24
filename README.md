@@ -34,8 +34,6 @@ module.exports = {
 }
 ```
 
-## 使用方法请看 vue.config.js
-
 ## Usage
 
 ``` bash
