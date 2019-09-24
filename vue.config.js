@@ -1,5 +1,5 @@
 const path = require('path')
-const createEntry = require('./mutiple-entry')
+const { generateEntries } = require('./mutiple-entry')
 
 const resolve = dir => path.join(__dirname, dir)
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
@@ -7,9 +7,7 @@ const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
 module.exports = {
   publicPath: IS_PROD ? process.env.BASE_URL : '/',
   productionSourceMap: false,
-  pages: {
-    ...createEntry()
-  },
+  pages: generateEntries(),
   devServer: {
     open: true
   },

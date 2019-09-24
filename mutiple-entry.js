@@ -1,13 +1,14 @@
 const path = require('path')
 const glob = require('glob')
 
-const createEntry = () => {
-  const pageEntry = path.resolve(__dirname, './src/pages')
-  // 约定构建出的页面用folder名字
-  // 默认入口为每个页面的main.js
-  const entryFiles = glob.sync(pageEntry + '/**/main.js')
+const generateEntries = () => {
+  // 默认查询多页面地址
+  const PATH_ENTRY = path.resolve(__dirname, './src/pages')
+  // 约定构建出的页面用folder名字，默认入口为每个页面的main.js
+  const entryFilePaths = glob.sync(PATH_ENTRY + '/**/main.js')
   const entry = {}
-  entryFiles.forEach((filePath) => {
+  
+  entryFilePaths.forEach((filePath) => {
     const filename = filePath.match(/(\w+)\/main\.js$/)[1]
     entry[filename] = {
       entry: filePath,
@@ -22,4 +23,6 @@ const createEntry = () => {
   return entry
 }
 
-module.exports = createEntry
+module.exports = {
+  generateEntries
+}
