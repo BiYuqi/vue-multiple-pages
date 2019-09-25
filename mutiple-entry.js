@@ -9,7 +9,7 @@ const generateEntries = () => {
   const entry = {}
   
   entryFilePaths.forEach((filePath) => {
-    const filename = filePath.match(/(\w+)\/main\.js$/)[1]
+    const filename = filePath.match(/([^/]+)\/main\.js$/)[1]
     entry[filename] = {
       entry: filePath,
       template: 'public/index.html',
