@@ -21,7 +21,5 @@ module.exports = {
       .set('@rent', resolve('src/pages/rent'))
       .set('@index', resolve('src/pages/index'))
       .set('@common', resolve('src/components'))
-      .set('@router', resolve('src/router'))
-      .set('@store', resolve('src/store'))
   }
 }
