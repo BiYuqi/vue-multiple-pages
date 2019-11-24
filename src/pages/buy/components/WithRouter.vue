@@ -9,12 +9,12 @@
       </el-row>
       <el-row>
         <el-button type="primary">
-          <a href="index.html">跳转到多页面--Index Page</a>
+          <a href="/index.html">跳转到多页面--Index Page</a>
         </el-button>
       </el-row>
       <el-row>
         <el-button type="primary">
-          <a href="rent.html">跳转到多页面--Rent Page</a>
+          <a href="/rent/rent.html">跳转到多页面--Rent Page</a>
         </el-button>
       </el-row>
   </el-card>

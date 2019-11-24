@@ -1,4 +1,5 @@
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { generateEntries } = require('./mutiple-entry')
 
 const resolve = dir => path.join(__dirname, dir)
@@ -21,5 +22,28 @@ module.exports = {
       .set('@rent', resolve('src/pages/rent'))
       .set('@index', resolve('src/pages/index'))
       .set('@common', resolve('src/components'))
+
+    if (!IS_PROD) {
+      config.output
+        .filename(bundle => {
+          return bundle.chunk.name === 'index' ? 'js/[name].js' : '[name]/[name].js'
+        })
+    }
+
+    if (IS_PROD) {
+      config.output
+        .filename(bundle => {
+          return bundle.chunk.name === 'index' ? 'js/[name].[contenthash:8].js' : '[name]/[name].[contenthash:8].js'
+        })
+
+      config.plugin('extract-css').use(MiniCssExtractPlugin, [
+        {
+          filename: bundle => {
+            return bundle.chunk.name === 'index' ? 'css/[name].[contenthash:8].css' : '[name]/[name].[contenthash:8].css'
+          },
+          chunkFilename: 'css/[name].[contenthash:8].css'
+        }
+      ])
+    }
   }
 }

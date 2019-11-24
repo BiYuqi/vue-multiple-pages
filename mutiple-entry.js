@@ -7,16 +7,16 @@ const generateEntries = () => {
   // 约定构建出的页面用folder名字，默认入口为每个页面的main.js
   const entryFilePaths = glob.sync(PATH_ENTRY + '/**/main.js')
   const entry = {}
-  
+
   entryFilePaths.forEach((filePath) => {
-    const filename = filePath.match(/([^/]+)\/main\.js$/)[1]
-    entry[filename] = {
+    const FILENAME = filePath.match(/([^/]+)\/main\.js$/)[1]
+    entry[FILENAME] = {
       entry: filePath,
       template: 'public/index.html',
-      filename: `${filename}.html`,
+      filename: FILENAME === 'index' ? `${FILENAME}.html` : `${FILENAME}/${FILENAME}.html`,
       // title可不传，每个页面单独设置
-      title: `${filename} Page`,
-      chunks: ['chunk-vendors', 'chunk-common', filename]
+      title: `${FILENAME} Page`,
+      chunks: ['chunk-vendors', 'chunk-common', FILENAME]
     }
   })
 
