@@ -2,6 +2,8 @@
 
 > [Vue多页面](https://github.com/BiYuqi/vue-multiple-pages)配置实例
 
+[打包后按页面输出](https://github.com/BiYuqi/vue-multiple-pages/tree/support-build-nest-folder)
+
 ## Mutiple Setting
 ```js
 const path = require('path')
