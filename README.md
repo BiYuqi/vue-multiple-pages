@@ -43,9 +43,9 @@ git clone https://github.com/BiYuqi/vue-multiple-pages.git
 
 cd vue-multiple-pages
 
-npm install
+yarn install
 
-npm run serve
+yarn run serve
 
-npm run build
+yarn run build
 ```
