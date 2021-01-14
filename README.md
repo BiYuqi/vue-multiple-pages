@@ -76,21 +76,12 @@ module.exports = {
         })
     }
 
-    // build环境js & css处理
+    // build环境js
     if (IS_PROD) {
       config.output
         .filename(bundle => {
           return bundle.chunk.name === 'index' ? 'js/[name].[contenthash:8].js' : '[name]/[name].[contenthash:8].js'
         })
-
-      config.plugin('extract-css').use(MiniCssExtractPlugin, [
-        {
-          filename: bundle => {
-            return bundle.chunk.name === 'index' ? 'css/[name].[contenthash:8].css' : '[name]/[name].[contenthash:8].css'
-          },
-          chunkFilename: 'css/[name].[contenthash:8].css'
-        }
-      ])
     }
   }
 }
@@ -103,9 +94,9 @@ git clone https://github.com/BiYuqi/vue-multiple-pages.git
 
 cd vue-multiple-pages
 
-npm install
+yarn install
 
-npm run serve
+yarn run serve
 
-npm run build
+yarn run build
 ```

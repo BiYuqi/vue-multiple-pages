@@ -1,5 +1,4 @@
 const path = require('path')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { generateEntries } = require('./mutiple-entry')
 
 const resolve = dir => path.join(__dirname, dir)
@@ -35,15 +34,13 @@ module.exports = {
         .filename(bundle => {
           return bundle.chunk.name === 'index' ? 'js/[name].[contenthash:8].js' : '[name]/[name].[contenthash:8].js'
         })
-
-      config.plugin('extract-css').use(MiniCssExtractPlugin, [
-        {
-          filename: bundle => {
-            return bundle.chunk.name === 'index' ? 'css/[name].[contenthash:8].css' : '[name]/[name].[contenthash:8].css'
-          },
-          chunkFilename: 'css/[name].[contenthash:8].css'
-        }
-      ])
+      // 本来想让css按目录打包，但是一直失败报错，需要排查下原因
+      // config.plugin('extract-css').tap(args => [...args, ...[{
+      //   filename: bundle => {
+      //     return bundle.chunk.name === 'index' ? 'css/[name].[contenthash:8].css' : '[name]/[name].[contenthash:8].css'
+      //   },
+      //   chunkFilename: 'css/[name].[contenthash:8].css'
+      // }]])
     }
   }
 }
